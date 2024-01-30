@@ -25,4 +25,8 @@ layout: empty
        </url>
     {% endif %}
   {% endfor %}
+  <url>
+    <loc>https://skinalchemy.ru/</loc>
+    <lastmod>2024-01-30T19:54:05+00:00</lastmod>
+  </url>
 </urlset>
