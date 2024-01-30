@@ -20,7 +20,6 @@ email: svetlana@skinalchemy.ru
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jemoji
 
 # Exclude from processing.
