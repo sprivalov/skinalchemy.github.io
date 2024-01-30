@@ -13,7 +13,7 @@ jQuery(document).ready(function(){
 	erling_tm_modalbox();
 	erling_tm_nav_bg();
 	erling_tm_trigger_menu();
-	erling_tm_modalbox_news();
+	//erling_tm_modalbox_news();
 	erling_tm_modalbox_portfolio();
 	erling_tm_imgtosvg();
 	erling_tm_popup();
