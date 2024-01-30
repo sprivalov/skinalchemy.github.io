@@ -1,32 +1,54 @@
----
-layout: empty
----
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for post in site.posts %}
-    <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.lastmod == null %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      <changefreq>monthly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  {% endfor %}
-  {% for page in site.pages %}
-    {% if page.sitemap != null and page.sitemap != empty %}
-      <url>
-        <loc>{{ site.url }}{{ page.url }}</loc>
-        <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-        <priority>{{ page.sitemap.priority }}</priority>
-       </url>
-    {% endif %}
-  {% endfor %}
-  <url>
-    <loc>https://skinalchemy.ru/</loc>
-    <lastmod>2024-01-30T19:54:05+00:00</lastmod>
-  </url>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+<loc>https://skinalchemy.ru/news/facial_serum.html</loc>
+<lastmod>2024-01-30T00:00:00+00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://skinalchemy.ru/news/rosacea_complex.html</loc>
+<lastmod>2024-01-29T00:00:00+00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://skinalchemy.ru/news/biossance_squalane.html</loc>
+<lastmod>2024-01-28T00:00:00+00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://skinalchemy.ru/news/madagascar_centella.html</loc>
+<lastmod>2024-01-27T00:00:00+00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://skinalchemy.ru/news/skadi_cream.html</loc>
+<lastmod>2024-01-26T00:00:00+00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://skinalchemy.ru/news/optime_serum.html</loc>
+<lastmod>2024-01-25T00:00:00+00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://skinalchemy.ru/news/caution_mascara.html</loc>
+<lastmod>2024-01-24T00:00:00+00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://skinalchemy.ru/feed.xml</loc>
+<lastmod/>
+<changefreq/>
+<priority/>
+</url>
+<url>
+<loc>https://skinalchemy.ru/</loc>
+<lastmod>2024-01-30T19:54:05+00:00</lastmod>
+</url>
 </urlset>
