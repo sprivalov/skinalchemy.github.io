@@ -213,10 +213,10 @@ function erling_tm_preloader(){
 	if (!isMobile) {
 		setTimeout(function() {
 			preloader.addClass('preloaded');
-		}, 800);
+		}, 200);
 		setTimeout(function() {
 			preloader.remove();
-		}, 2000);
+		}, 500);
 
 	} else {
 		preloader.remove();
@@ -233,7 +233,7 @@ function erling_tm_my_load(){
 	
 	var speed	= 500;
 	setTimeout(function(){erling_tm_preloader();},speed);
-	setTimeout(function(){jQuery('.erling_tm_all_wrap').addClass('ready');},speed+2000);
+	setTimeout(function(){jQuery('.erling_tm_all_wrap').addClass('ready');},speed+1000);
 }
 
 // -----------------------------------------------------
