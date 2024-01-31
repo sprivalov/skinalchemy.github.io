@@ -1,8 +1,6 @@
-{% if page.is_post %}
-<!DOCTYPE html itemscope itemtype="http://schema.org/BlogPosting">
-{% else %}
-<!DOCTYPE html itemscope itemtype="http://schema.org/Blog">
-{% endif %}
+
+<!DOCTYPE html>
+
 
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -18,16 +16,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-{% if page.is_post %}
-<meta itemprop="author" content="Sviata Beauty">
-<meta itemprop="name" content="{{page.title}}">
-<meta itemprop="image" content="{{site.url}}{{page.image}}">
-<meta itemprop="description" content="{{page.description}}">
-{% else %}
-<meta itemprop="creator" content="Sviata Beauty">
-<meta itemprop="name" content="Skin Alchemy">
-<meta itemprop="description" content="Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;">
-{% endif %}
 
 <title>Skin Alchemy</title>
 
@@ -106,7 +94,7 @@
 			</div>
 			<div class="dropdown">
 				<div class="dropdown_inner">
-					<ul itemprop="breadcrumb" class="anchor_nav">
+					<ul class="anchor_nav">
 						<li class="current"><a href="/#home">Главная</a></li>
 						<li><a href="/#about">Обо мне</a></li>
 						<!--li><a href="#service">Services</a></li-->
@@ -135,7 +123,7 @@
 				</div>
 				<div class="menu">
 					<div class="list">
-						<ul itemprop="breadcrumb" class="anchor_nav">
+						<ul class="anchor_nav">
 							<li class="current"><a href="/#home">Главная</a></li>
 							<li><a href="/#about">Обо мне</a></li>
 							<!--li><a href="#service">Services</a></li-->
