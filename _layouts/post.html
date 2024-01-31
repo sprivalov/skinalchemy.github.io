@@ -1,6 +1,22 @@
 ---
 layout: default
 ---
+  
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{page.title}}",
+      "image": [
+        "{{site.url}}{{page.image}}}"
+        ],
+      "author": [{
+          "@type": "Person",
+          "name": "Sviata Beauty",
+          "url": "{{site.url}}"
+        }]
+    }
+    </script>
 
 		<!-- ABOUT -->
 		<div class="erling_tm_section clearfix" id="about" itemscope itemtype="http://schema.org/Article">
@@ -19,9 +35,7 @@ layout: default
 					</div>
 				</div>
 			</div>
-			<meta itemprop="author" content="Person"/>
-			<meta itemprop="author.name" content="Sviata Beauty"/>
-			<meta itemprop="author.url" content="{{site.url}}"/>
+			<meta itemprop="author" content="Sviata Beauty" itemscope itemtype="https://schema.org/Person" />
 
 		</div>
 		<!-- /ABOUT -->
