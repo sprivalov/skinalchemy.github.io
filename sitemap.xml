@@ -1,54 +1,40 @@
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+---
+layout: empty
+sitemap:
+  exclude: 'yes'
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-<loc>https://skinalchemy.ru/news/facial_serum.html</loc>
-<lastmod>2024-01-30T00:00:00+00:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
+  <loc>{{ site.url }}</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1</priority>
 </url>
-<url>
-<loc>https://skinalchemy.ru/news/rosacea_complex.html</loc>
-<lastmod>2024-01-29T00:00:00+00:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://skinalchemy.ru/news/biossance_squalane.html</loc>
-<lastmod>2024-01-28T00:00:00+00:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://skinalchemy.ru/news/madagascar_centella.html</loc>
-<lastmod>2024-01-27T00:00:00+00:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://skinalchemy.ru/news/skadi_cream.html</loc>
-<lastmod>2024-01-26T00:00:00+00:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://skinalchemy.ru/news/optime_serum.html</loc>
-<lastmod>2024-01-25T00:00:00+00:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://skinalchemy.ru/news/caution_mascara.html</loc>
-<lastmod>2024-01-24T00:00:00+00:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://skinalchemy.ru/feed.xml</loc>
-<lastmod/>
-<changefreq/>
-<priority/>
-</url>
-<url>
-<loc>https://skinalchemy.ru/</loc>
-<lastmod>2024-01-30T19:54:05+00:00</lastmod>
-</url>
+{% for collection in site.collections %}
+ {% for post in collection.docs %}
+  {% unless post.published == false or post.sitemap.exclude == "yes" or page.name == "feed.xml"  %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        {% if post.sitemap.lastmod %}
+            <lastmod>{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+        {% elsif post.date %}
+            <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+            <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {% endif %}
+        {% if post.sitemap.changefreq %}
+            <changefreq>{{ post.sitemap.changefreq }}</changefreq>
+        {% else %}
+            <changefreq>monthly</changefreq>
+        {% endif %}
+        {% if post.sitemap.priority %}
+            <priority>{{ post.sitemap.priority }}</priority>
+        {% else %}
+            <priority>0.5</priority>
+        {% endif %}
+    </url>
+  {% endunless %}
+ {% endfor %}
+{% endfor %}
 </urlset>
