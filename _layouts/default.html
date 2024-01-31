@@ -1,17 +1,33 @@
-<!DOCTYPE html>
+{% if page.is_post %}
+<!DOCTYPE html itemscope itemtype="http://schema.org/BlogPosting">
+{% else %}
+<!DOCTYPE html itemscope itemtype="http://schema.org/Blog">
+{% endif %}
+
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
 
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="description" content="Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;">
-<meta name="author" content="SkinAlchemy.by">
+<meta name="author" content="Sviata Beauty">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+{% if page.is_post %}
+<meta itemprop="author" content="Sviata Beauty">
+<meta itemprop="name" content="{{page.title}}">
+<meta itemprop="image" content="{{site.url}}{{page.image}}">
+<meta itemprop="description" content="{{page.description}}">
+{% else %}
+<meta itemprop="creator" content="Sviata Beauty">
+<meta itemprop="name" content="Skin Alchemy">
+<meta itemprop="description" content="Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;">
+{% endif %}
 
 <title>Skin Alchemy</title>
 
@@ -56,7 +72,7 @@
 
 </head>
 
-<body> 
+<body itemscope itemtype="http://schema.org/WebPage"> 
 	
 	<!-- PRELOADER -->
 	<!--div id="preloader">
@@ -90,7 +106,7 @@
 			</div>
 			<div class="dropdown">
 				<div class="dropdown_inner">
-					<ul class="anchor_nav">
+					<ul itemprop="breadcrumb" class="anchor_nav">
 						<li class="current"><a href="/#home">Главная</a></li>
 						<li><a href="/#about">Обо мне</a></li>
 						<!--li><a href="#service">Services</a></li-->
@@ -119,7 +135,7 @@
 				</div>
 				<div class="menu">
 					<div class="list">
-						<ul class="anchor_nav">
+						<ul itemprop="breadcrumb" class="anchor_nav">
 							<li class="current"><a href="/#home">Главная</a></li>
 							<li><a href="/#about">Обо мне</a></li>
 							<!--li><a href="#service">Services</a></li-->
