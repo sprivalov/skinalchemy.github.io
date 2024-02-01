@@ -17,6 +17,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="zen-verification" content="LyOm901o8Ad31JEtmtOjB4yClvkhLiNI1zHYCfu3y561AXWtUa1bjnsqAknF3By8" />
 
+{% if page.is_post %}
+<meta property="og:title" content="{{page.title}}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{site.url}}{{page.url}}" />
+<meta property="og:image" content="{{page.image}}" />
+{% else %}
+<meta property="og:title" content="Skin Alchemy" />
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="{{site.url}}" />
+<meta property="og:image" content="{{site.url}}/img/about/sviatabeauty_v2.png" />
+{% endif %}
+
 
 <title>Skin Alchemy</title>
 
