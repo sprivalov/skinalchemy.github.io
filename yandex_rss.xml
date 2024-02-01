@@ -44,6 +44,9 @@ sitemap:
             <yandex:related></yandex:related>
             <turbo:content>
                 <![CDATA[
+                    <header>
+                      <h1>{{post.title}}</h1>
+                    </header>
                     {{post.content}}
                 ]]>
             </turbo:content>
