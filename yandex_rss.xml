@@ -13,7 +13,6 @@ sitemap:
         <link>{{site.url}}</link>
         <description>Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;</description>
         <language>ru</language>
-        <turbo:analytics></turbo:analytics>
         <turbo:analytics type="Yandex"
                  id="96313130">
         </turbo:analytics>        
