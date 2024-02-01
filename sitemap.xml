@@ -13,7 +13,7 @@ sitemap:
 </url>
 {% for collection in site.collections %}
  {% for post in collection.docs %}
-  {% unless post.published == false or post.sitemap.exclude == "yes" or page.name == "feed.xml"  %}
+  {% unless post.published == false or post.sitemap.exclude == "yes" or page.name == "feed.xml" or page.name == "yandex_rss.xml" %}
     <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
         {% if post.sitemap.lastmod %}
