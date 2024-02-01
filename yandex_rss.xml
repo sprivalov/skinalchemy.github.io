@@ -1,0 +1,53 @@
+---
+layout: empty
+sitemap:
+  exclude: 'yes'
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:yandex="http://news.yandex.ru"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:turbo="http://turbo.yandex.ru"
+     version="2.0">
+    <channel>
+        <title>Skin Alchemy</title>
+        <link>{{site.url}}</link>
+        <description>Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;</description>
+        <language>ru</language>
+        <turbo:analytics></turbo:analytics>
+        <turbo:adNetwork></turbo:adNetwork>
+
+{% for collection in site.collections %}
+ {% for post in collection.docs %}
+    <item turbo="true">
+        <turbo:extendedHtml>true</turbo:extendedHtml>
+        <turbo:extendedHtml>true</turbo:extendedHtml>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <turbo:source></turbo:source>
+        <turbo:topic></turbo:topic>
+        {% if post.sitemap.lastmod %}
+            <pubDate>{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}</pubDate>
+        {% elsif post.date %}
+            <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+        {% else %}
+            <pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+        {% endif %}
+        <author>Sviata Beauty</author>
+            <metrics>
+                <yandex schema_identifier="{{post.title}}">
+                    <breadcrumblist>
+                        <breadcrumb url="{{site.url}}" text="Главная"/>
+                        <breadcrumb url="{{ site.url }}{{ post.url }}" text="{{post.title}}"/>
+                    </breadcrumblist>
+                </yandex>
+            </metrics>
+            <yandex:related></yandex:related>
+            <turbo:content>
+                <![CDATA[
+                    {{post.content}}
+                ]]>
+            </turbo:content>
+    </item>
+ {% endfor %}
+{% endfor %}        
+    </channel>
+</rss>
