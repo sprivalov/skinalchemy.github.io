@@ -14,7 +14,9 @@ sitemap:
         <description>Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;</description>
         <language>ru</language>
         <turbo:analytics></turbo:analytics>
-        <turbo:adNetwork></turbo:adNetwork>
+        <turbo:analytics type="Yandex"
+                 id="96313130">
+        </turbo:analytics>        
 
 {% for collection in site.collections %}
  {% for post in collection.docs %}
