@@ -46,7 +46,14 @@ sitemap:
                     <header>
                       <h1>{{post.title}}</h1>
                     </header>
+                    <figure>
+                      <img src="{{site.url}}{{post.image_tmb}}">
+                    </figure>
                     {{post.content}}
+                    <div data-block="widget-feedback" data-stick="false">
+                      <div data-block="chat" data-type="telegram" data-url="https://t.me/sviata_beauty"></div>
+                      <div data-block="chat" data-type="vkontakte" data-url="https://vk.ru/skinalchemy"></div>
+                    </div>
                 ]]>
             </turbo:content>
     </item>
