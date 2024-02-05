@@ -4,7 +4,7 @@ title: "Сыворотка Микробиом от бренда Seveki"
 layout: post
 permalink: /news/microniome_seveki.html
 image: ["/img/news/microbiome_seveki.jpeg"]
-image_tmb: ["/img/news/microbiome_seveki_tmb.jpeg"]
+image_tmb: ["/img/news/microbiome_seveki_tbm.jpeg"]
 description: "Сыворотка Микробиом идеально подошла для моей реактивной кожи. Ее фишка - два комплекса лизатов бактерий, которые помогают восстанавливать микробиом и барьерную функцию кожи."
 ---
 Сыворотка как основа ухода. Что это значит?
