@@ -1645,7 +1645,7 @@ h6 { font-size: 16px; }
 .erling_tm_copyright{
 	width: 100%;
 	background-color: #333;
-	padding: 45px 0px;
+	padding: 45px 0px 0px 0px;
 }
 .erling_tm_copyright .inner{
 	width: 100%;
@@ -1705,6 +1705,40 @@ h6 { font-size: 16px; }
 .progressbar a{
 	text-decoration: none;
 	color: #000;
+}
+
+/*---------------------------------------------------*/
+/*	AGREEMENT
+/*---------------------------------------------------*/
+
+.erling_tm_agreement{
+	width: 100%;
+	background-color: #333;
+}
+.erling_tm_agreement .inner{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.erling_tm_agreement img{
+	max-width: 140px;
+	max-height: 70px;
+}
+.erling_tm_agreement p{
+	color: #fff;
+}
+.erling_tm_agreement p a{
+	color: #fff;
+}
+.erling_tm_agreement .link_box{
+	text-align: center;
+    width: 100%;
+    font-size: 12px;
+}
+
+.erling_tm_agreement .link_text{
+	color: darkgray;
 }
 
 /*---------------------------------------------------*/
