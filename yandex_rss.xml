@@ -33,10 +33,10 @@ sitemap:
         {% endif %}
         <author>Sviata Beauty</author>
             <metrics>
-                <yandex schema_identifier="{{post.title}}">
+                <yandex schema_identifier="{{post.title | xml_escape}}">
                     <breadcrumblist>
                         <breadcrumb url="{{site.url}}" text="Главная"/>
-                        <breadcrumb url="{{ site.url }}{{ post.url }}" text="{{post.title}}"/>
+                        <breadcrumb url="{{ site.url }}{{ post.url }}" text="{{post.title | xml_escape}}"/>
                     </breadcrumblist>
                 </yandex>
             </metrics>
