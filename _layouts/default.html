@@ -42,10 +42,13 @@
 <link rel="stylesheet" type="text/css" href="/css/modalboxes.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
 <link rel="stylesheet" type="text/css" href="/css/logo.css" />
+<link rel="stylesheet" type="text/css" href="/css/opentip.css" />
+
 <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+
 
 <!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
 <!-- /STYLES -->
@@ -184,7 +187,7 @@
 						  </div>
 						</div>
 						<div class="text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-							<p><a class="line_effect" target="_blank" href="https://www.instagram.com/sviata_beauty/">Instagram</a></p>
+							<a class="line_effect" target="_blank" href="https://www.instagram.com/sviata_beauty/">Instagram</a><div id="bottom-instagram" data-ot="Сервис запрещенный на территории РФ" data-ot-show-on="click" data-ot-background="white" data-ot-border-color="#868a9b" style="display: inline;color:white">*</div>
 						</div>
 						<div class="text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
 							<p><a class="line_effect" target="_blank" href="https://vk.ru/skinalchemy">ВКонтакте</a></p>
@@ -236,6 +239,7 @@
 <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
 <script src="/js/plugins.js"></script>
 <script src="/js/contact.form.js"></script>
+<script src="/js/opentip-jquery-excanvas.min.js"></script>
 <script src="/js/init.js"></script>
 <!-- /SCRIPTS -->
 <script>
@@ -243,6 +247,9 @@
 			var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
 			var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 	})(window,document,'https://cdn-ru.bitrix24.by/b28180102/crm/site_button/loader_4_lef5ot.js');
+</script>
+<script type="text/javascript">
+	//$("#bio-instagram").opentip("Сервис запрещенный на территории РФ", { delay: 2 });
 </script>
 </body>
 </html>
