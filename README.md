@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">SkinAlcheme Personal Website</h3>
+  <h3 align="center">SkinAlchemy Personal Website</h3>
 
 
 
