@@ -107,36 +107,21 @@ layout: default
 					</div>
 					<div class="news_list">
 						<ul>
-							{% for post in site.posts limit:9 %}<li class="wow fadeInLeft" data-wow-duration="1s">
-								<div class="list_inner">
-									<div class="image">
-										<img src="img/thumbs/4-3.jpg" alt="" />
-										<div class="main" data-img-url="{{post.image_tmb}}"></div>
-										<a class="erling_tm_full_link" href="{{post.url}}"></a>
-									</div>
-									<div class="details">
-										<div class="title">
-											<h3><a class="text_hover_effect" href="{{post.url}}">{{post.title}}</a></h3>
-										</div>
-									</div>
-								</div>
-							</li>{% endfor %}
-
 						</ul>
 					</div>
-					<!--div class="erling_tm_swiper_progress fill">
-						<div class="my_pagination_in">
+					<div class="erling_tm_swiper_progress fill">
+						<div class="my_pagination_in" id="articlePaginator">
 							<span class="current"></span>
 							<span class="pagination_progress"><span class="all"><span></span></span></span>
 							<span class="total"></span>
 						</div>
-						<div class="my_navigation">
+						<div class="my_navigation" id="articlePaginatorControls">
 							<ul>
 								<li><a class="my_prev" href="#"><i class="icon-left-open-1"></i></a></li>
 								<li><a class="my_next" href="#"><i class="icon-right-open-1"></i></a></li>
 							</ul>
 						</div>
-					</div-->			
+					</div>			
 				</div>
 			</div>
 		</div>
