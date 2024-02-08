@@ -9,7 +9,6 @@ jQuery(document).ready(function(){
 	"use strict";
 	
 	// here all ready functions
-	initArticlesSwiper();
 	erling_tm_modalbox();
 	erling_tm_nav_bg();
 	erling_tm_trigger_menu();
@@ -22,14 +21,16 @@ jQuery(document).ready(function(){
 	myAccordion();
 	erling_tm_totop();
 	
-	jQuery(window).load('body', function(){
+	jQuery(window).ready(function(){
 		erling_tm_my_load();
 	});
 	
 	jQuery(window).on('scroll', function(){
 		erling_tm_progress_line();
 	});
-	
+
+	initArticlesSwiper();
+
 });
 
 // -----------------------------------------------------
