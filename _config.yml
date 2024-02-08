@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Skin Alchemy
 email: svetlana@skinalchemy.ru
+url: https://skinalchemy.ru
 
 defaults:
   -
