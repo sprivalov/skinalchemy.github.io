@@ -1,6 +1,11 @@
 ---
 layout: null
 permalink: /articles
+pagination:
+  permalink: ''
+  enabled: true
+  extension: .json
+  indexpage: 'articles_feed-:num'
 ---
 
 {

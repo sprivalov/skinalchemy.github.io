@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
 	"use strict";
 	
 	// here all ready functions
-	//initArticlesSwiper();
+	initArticlesSwiper();
 	erling_tm_modalbox();
 	erling_tm_nav_bg();
 	erling_tm_trigger_menu();
