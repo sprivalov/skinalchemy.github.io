@@ -1741,6 +1741,17 @@ h6 { font-size: 16px; }
 	color: darkgray;
 }
 
+/*----------------------------------------------------*/
+.faq_answer p {
+	background: white;
+    padding: 10px;
+}
+
+.faq_block {
+	padding: 20px;
+}
+
+
 /*---------------------------------------------------*/
 /*	14) ERLING MEDIA QUERIES (FOR SMALL DEVICES)
 /*---------------------------------------------------*/

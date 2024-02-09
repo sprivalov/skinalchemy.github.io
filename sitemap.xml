@@ -11,6 +11,12 @@ sitemap:
   <changefreq>monthly</changefreq>
   <priority>1</priority>
 </url>
+<url>
+  <loc>{{ site.url }}/faq.html</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1</priority>
+</url>
 {% for collection in site.collections %}
  {% for post in collection.docs %}
   {% unless post.published == false or post.sitemap.exclude == "yes" or page.name == "feed.xml" or page.name == "yandex_rss.xml" or page.name == "agreement.html"%}

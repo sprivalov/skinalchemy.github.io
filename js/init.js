@@ -20,6 +20,7 @@ jQuery(document).ready(function(){
 	erling_tm_swiper();
 	myAccordion();
 	erling_tm_totop();
+	pageMenuActivation();
 	
 	jQuery(window).ready(function(){
 		erling_tm_my_load();
@@ -468,4 +469,13 @@ function erling_tm_totop(){
 		return false;
 	});
 	
+}
+
+function pageMenuActivation(){
+	if (window.location.pathname == '/faq.html') {
+		jQuery(".anchor_nav li").removeClass("current");
+		jQuery("#faqMenu").addClass("current");
+		jQuery("#faqMobMenu").addClass("current");	
+	
+	}
 }
