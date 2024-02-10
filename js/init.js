@@ -115,14 +115,14 @@ function erling_tm_trigger_menu(){
 		if(element.hasClass('is-active')){
 			element.removeClass('is-active');
 			if(jQuery('.audiowrap').length){
-				audio1[0].play();
+				//audio1[0].play();
 			}
 			list.removeClass('opened');
 			mobileMenu.slideUp();
 		}else{
 			element.addClass('is-active');
 			if(jQuery('.audiowrap').length){
-				audio2[0].play();
+				//audio2[0].play();
 			}
 			list.each(function(i){
 				var ele = jQuery(this);
