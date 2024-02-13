@@ -13,18 +13,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="zen-verification" content="LyOm901o8Ad31JEtmtOjB4yClvkhLiNI1zHYCfu3y561AXWtUa1bjnsqAknF3By8" />
 
-{% if page.is_post %}
+
+{% if page.title %}
 <title>Skin Alchemy | {{page.title}}</title>
+<meta property="og:title" content="Skin Alchemy | {{page.title}}" />
+{% else %}
+<title>Skin Alchemy</title>
+<meta property="og:title" content="Skin Alchemy" />
+{% endif %}
+
+
+{% if page.is_post %}
 <meta name="description" content="{{page.description}}">
-<meta property="og:title" content="{{page.title}}" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="{{site.url}}{{page.url}}" />
 <meta property="og:image" content="{{site.url}}{{page.image}}" />
 <meta property="og:description" content="{{page.description}}"/>
 {% else %}
-<title>Skin Alchemy</title>
 <meta name="description" content="Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;">
-<meta property="og:title" content="Skin Alchemy" />
 <meta property="og:type" content="profile" />
 <meta property="og:url" content="{{site.url}}" />
 <meta property="og:image" content="{{site.url}}/img/about/sviatabeauty_v2.png" />
