@@ -472,8 +472,10 @@ function erling_tm_totop(){
 }
 
 function pageMenuActivation(){
-	if (window.location.pathname == '/faq.html') {
+	if (window.location.pathname == '/faq.html' || window.location.pathname.startsWith('/news/')) {
 		jQuery(".anchor_nav li").removeClass("current");
+	}
+	if (window.location.pathname == '/faq.html') {
 		jQuery("#faqMenu").addClass("current");
 		jQuery("#faqMobMenu").addClass("current");	
 		$(document).ready(function() {
