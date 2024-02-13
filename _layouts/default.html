@@ -22,19 +22,23 @@
 <meta property="og:title" content="Skin Alchemy" />
 {% endif %}
 
+{% if page.description %}
+<meta property="og:description" content="{{page.description}}"/>
+<meta name="description" content="{{page.description}}">
+{% else %}
+<meta name="description" content="Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;">
+<meta property="og:description" content="Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;"/>
+{% endif %}
+
 
 {% if page.is_post %}
-<meta name="description" content="{{page.description}}">
 <meta property="og:type" content="article" />
 <meta property="og:url" content="{{site.url}}{{page.url}}" />
 <meta property="og:image" content="{{site.url}}{{page.image}}" />
-<meta property="og:description" content="{{page.description}}"/>
 {% else %}
-<meta name="description" content="Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;">
 <meta property="og:type" content="profile" />
 <meta property="og:url" content="{{site.url}}" />
 <meta property="og:image" content="{{site.url}}/img/about/sviatabeauty_v2.png" />
-<meta property="og:description" content="Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;"/>
 {% endif %}
 
 
