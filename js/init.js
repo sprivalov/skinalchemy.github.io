@@ -476,6 +476,12 @@ function pageMenuActivation(){
 		jQuery(".anchor_nav li").removeClass("current");
 		jQuery("#faqMenu").addClass("current");
 		jQuery("#faqMobMenu").addClass("current");	
+		$(document).ready(function() {
+			if (window.location.href.indexOf("#") >= 0 ) {
+			  var selector = window.location.href.substring(window.location.href.indexOf("#"), window.location.href.length) + ' .accordion_header';
+			  $(selector).click();
+			} 
+		});
 	
 	}
 }
