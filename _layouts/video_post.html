@@ -1,0 +1,47 @@
+---
+layout: default
+---
+  
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{page.title}}",
+      "image": [
+        "{{site.url}}{{page.image}}"
+        ],
+      "author": [{
+          "@type": "Person",
+          "name": "Sviata Beauty",
+          "url": "{{site.url}}"
+        }]
+    }
+</script>
+
+		<!-- ABOUT -->
+		<div class="erling_tm_section clearfix" id="postContainer" itemscope itemprop="VideoObject" itemtype="https://schema.org/VideoObject">
+			<div class="erling_tm_about">
+				<div class="container">
+					<meta itemprop="author" content="Sviata Beauty"/>
+                    <meta itemprop="contentUrl" content="{{page.video_url}}" />
+                    <meta itemprop="regionsAllowed" content="{{page.regions}}" />
+                    <meta itemprop="thumbnailUrl" content="{{page.image}}" />
+                    <div class="erling_tm_title">
+                        <h3 itemprop="name">{{page.title}}</h3>
+                    </div>
+                    {{content}}
+				</div>
+			</div>
+            <!-- Yandex.RTB R-A-5846127-5 -->
+            <div id="yandex_rtb_R-A-5846127-5"></div>
+		</div>
+		<!-- /ABOUT -->
+		<script>
+			window.yaContextCb.push(()=>{
+				Ya.Context.AdvManager.render({
+					"blockId": "R-A-5846127-5",
+					"renderTo": "yandex_rtb_R-A-5846127-5"
+				})
+			})
+		</script>   
+		

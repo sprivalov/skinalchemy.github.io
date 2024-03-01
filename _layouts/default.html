@@ -12,22 +12,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="zen-verification" content="LyOm901o8Ad31JEtmtOjB4yClvkhLiNI1zHYCfu3y561AXWtUa1bjnsqAknF3By8" />
-
+<meta property="og:type" content="website">
 
 {% if page.title %}
 <title>Skin Alchemy | {{page.title}}</title>
-<meta property="og:title" content="Skin Alchemy | {{page.title}}" />
+<meta property="og:title" content="Skin Alchemy - {{page.title}}" />
 {% else %}
 <title>Skin Alchemy</title>
-<meta property="og:title" content="Skin Alchemy" />
+<meta property="og:title" content="Skin Alchemy - Красота и уход за кожей" />
 {% endif %}
 
 {% if page.description %}
 <meta property="og:description" content="{{page.description}}"/>
 <meta name="description" content="{{page.description}}">
 {% else %}
-<meta name="description" content="Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;">
-<meta property="og:description" content="Рекомендации для любого типа кожи; Отзывы о косметических средствах; Советы по борьбе с различными проблемами кожи;"/>
+<meta name="description" content="Полезная информация и советы по уходу за кожей любого типа  от Skin Alchemy. Отзывы о косметических средствах. Советы по борьбе с различными проблемами кожи.">
+<meta property="og:description" content="Полезная информация и советы по уходу за кожей любого типа от Skin Alchemy. Отзывы о косметических средствах. Советы по борьбе с различными проблемами кожи."/>
 {% endif %}
 
 
@@ -57,8 +57,13 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="canonical" href="{{ site.url }}">
 
-<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+<!--[if lt IE 9]> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script type="text/javascript" src="js/modernizr.custom.js"></script> 
+<![endif]-->
 <!-- /STYLES -->
 
 <!-- Google tag (gtag.js) -->

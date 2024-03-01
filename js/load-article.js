@@ -1,13 +1,11 @@
 jQuery(document).ready(function(){
   loadSkinAlchemyArticlePage = function(pagePath, articlesBuilder) {
-    jQuery.get(pagePath)
-        .done(function(data) {
-            articlesBuilder(data);
-        })
-        .fail(function() {
-          console.log( "error getting articles feed" );
-        });
-  };
+  jQuery.getJSON(pagePath)
+    .done(articlesBuilder)
+    .fail(function(jqXHR, textStatus, errorThrown) {
+      console.error("Error getting articles feed:", textStatus, errorThrown);
+    });
+};
   
   buildArticlesSection = function(page) {
     loadSkinAlchemyArticlePage(page, function(data){

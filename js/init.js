@@ -3,7 +3,6 @@
  * Author: Marketify
  * This file is made for CURRENT TEMPLATE
 */
-
 jQuery(document).ready(function(){
 
 	"use strict";
@@ -471,19 +470,28 @@ function erling_tm_totop(){
 	
 }
 
-function pageMenuActivation(){
-	if (window.location.pathname == '/faq.html' || window.location.pathname.startsWith('/news/')) {
-		jQuery(".anchor_nav li").removeClass("current");
+function pageMenuActivation() {
+	"use strict";
+
+	var path = window.location.pathname;
+	var href = window.location.href;
+	var $anchorNavLi = jQuery(".anchor_nav li");
+	var $faqMenu = jQuery("#faqMenu");
+	var $faqMobMenu = jQuery("#faqMobMenu");
+
+	if (path === '/faq.html' || path.startsWith('/news/')) {
+		$anchorNavLi.removeClass("current");
 	}
-	if (window.location.pathname == '/faq.html') {
-		jQuery("#faqMenu").addClass("current");
-		jQuery("#faqMobMenu").addClass("current");	
-		$(document).ready(function() {
-			if (window.location.href.indexOf("#") >= 0 ) {
-			  var selector = window.location.href.substring(window.location.href.indexOf("#"), window.location.href.length) + ' .accordion_header';
-			  $(selector).click();
-			} 
+
+	if (path === '/faq.html') {
+		$faqMenu.addClass("current");
+		$faqMobMenu.addClass("current");
+		jQuery(document).ready(function() {
+			var hashIndex = href.indexOf("#");
+			if (hashIndex >= 0) {
+				var selector = href.substring(hashIndex) + ' .accordion_header';
+				jQuery(selector).click();
+			}
 		});
-	
 	}
 }
